@@ -1,0 +1,20 @@
+server:
+  port: 8081
+  servlet:
+    context-path:
+    session:
+      timeout: 3600
+
+sp:
+  entity_id: http://localhost:8081
+  single_sign_on_service_location: http://localhost:8080/sso
+  single_logout_service_location: http://localhost:8080/slo
+  acs: /acs
+  dest: /dest
+  login_url: /login
+  logout_url: /logout
+
+logging:
+  level:
+    root: info
+    saml.example.sp: debug
